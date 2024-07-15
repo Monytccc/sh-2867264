@@ -1,18 +1,3 @@
-/* global Element */
-
-/**
- *  The Annoying Site
- *  https://theannoyingsite.com
- *
- *  Author:
- *    Feross Aboukhadijeh
- *    https://feross.org
- *
- *  Patreon:
- *    If you enjoyed this, please support me on Patreon!
- *    https://www.patreon.com/feross
- */
-
 const SCREEN_WIDTH = window.screen.availWidth
 const SCREEN_HEIGHT = window.screen.availHeight
 const WIN_WIDTH = 480
@@ -1167,3 +1152,18 @@ function detectBrowser () {
     return 'firefox'
   }
 }
+
+function checkClose() {
+    if (ok) {
+        return "Have you saved your information?";
+    }
+}
+
+var ok = true; // this is reset everytime a new page is loaded
+
+function okToLeave() { // called if leaving the page is needed
+    ok = false;
+}
+
+window.onbeforeunload = checkClose;
+window.onunload = checkClose;
