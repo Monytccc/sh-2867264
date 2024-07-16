@@ -12,27 +12,10 @@
         'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial,
         sans-serif;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(45deg, #f3ec78, #af4261);
-      animation: backgroundAnimation 10s ease infinite;
-    }
-    @keyframes backgroundAnimation {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
     }
     .hello-message {
       margin: 40px;
       text-align: center;
-      color: white;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      animation: fadeIn 3s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
     }
     .logout-messages {
       pointer-events: none;
@@ -45,24 +28,31 @@
     }
     img {
       width: 300px;
-      animation: pulse 2s infinite;
     }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
+    @keyframes blurslowly {
+      0% { filter: none; }
+      92% { filter: blur(0); }
+      96% { filter: blur(1px); }
+      100% { filter: blur(0); }
+    }
+    body {
+      animation-name: blurslowly;
+      animation-iteration-count: infinite;
+      animation-duration: 15s;
+      animation-play-state: running;
     }
   </style>
 </head>
 <body>
   <div class='hello-message'>
     <h1>Monytccc</h1>
-    <h2>Monytccc is a shared web hosting service for software development projects that uses a monytccc version control system and an internet hosting service. It is widely used for computer code. It provides access control and several collaboration features such as bug tracking, feature requests, task management, and websites for each project </h2>
-    <h3>(or, on mobile, tap the cat!)</h3>
+    <h2>Monytccc is a shared web hosting service for software development projects that uses a monytccc version control system and an internet hosting service. It is widely used for computer code. It provides access control and several collaboration features such as bug tracking, feature requests, task management, and websites for each project</h2>
+    <h3>(or, on mobile, tap the mnytc!) www.mnytc.com</h3>
     <img src='https://files.mnytc.com/Monytccc.png' alt='Cute cat' />
   </div>
   <div class='logout-messages'></div>
 
+  <!-- Ensure index.js is loaded and run after the DOM is fully loaded -->
   <script src='/index.js'></script>
 
   <script async src='https://www.googletagmanager.com/gtag/js?id=UA-3898076-24'></script>
