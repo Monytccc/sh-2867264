@@ -1,4 +1,18 @@
 <!doctype html>
+
+<!--
+  The Annoying Site
+  https://theannoyingsite.com
+
+  Author:
+    Feross Aboukhadijeh
+    https://feross.org
+
+  Patreon:
+    If you enjoyed this, please support me on Patreon!
+    https://www.patreon.com/feross
+-->
+
 <html>
 <head>
   <meta charset='UTF-8'>
@@ -30,10 +44,18 @@
       width: 300px;
     }
     @keyframes blurslowly {
-      0% { filter: none; }
-      92% { filter: blur(0); }
-      96% { filter: blur(1px); }
-      100% { filter: blur(0); }
+      0% {
+        filter: none;
+      }
+      92% {
+        filter: blur(0);
+      }
+      96% {
+        filter: blur(1px);
+      }
+      100% {
+        filter: blur(0);
+      }
     }
     body {
       animation-name: blurslowly;
@@ -44,25 +66,33 @@
   </style>
 </head>
 <body>
+
+<template>
+
+  <script src='/index.js'></script>
+  
   <div class='hello-message'>
     <h1>Monytccc</h1>
     <h2>Monytccc is a shared web hosting service for software development projects that uses a monytccc version control system and an internet hosting service. It is widely used for computer code. It provides access control and several collaboration features such as bug tracking, feature requests, task management, and websites for each project</h2>
-    <h3>(or, on mobile, tap the mnytc!) www.mnytc.com</h3>
+    <h3>(or, on mobile, tap the mnytc!)</h3>
+    <h4>wwww.mnytc.com</h4>
+
     <img src='https://files.mnytc.com/Monytccc.png' alt='Cute cat' />
   </div>
   <div class='logout-messages'></div>
+</template>
 
-  <!-- Ensure index.js is loaded and run after the DOM is fully loaded -->
-  <script src='/index.js'></script>
+<script src='/index.js'></script>
 
-  <script async src='https://www.googletagmanager.com/gtag/js?id=UA-3898076-24'></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      window.dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-3898076-24');
-  </script>
+<script async src='https://www.googletagmanager.com/gtag/js?id=UA-3898076-24'></script>
+<script>
+  window.dataLayer = window.dataLayer || []
+  function gtag () {
+    window.dataLayer.push(arguments)
+  }
+  gtag('js', new Date())
+  gtag('config', 'UA-3898076-24')
+</script>
+
 </body>
 </html>
